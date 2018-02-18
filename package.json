@@ -1,0 +1,29 @@
+{
+  "name": "ObjectUpdates",
+  "version": "0.0.0",
+  "description": "A simple application for updating object properties through websockets",
+  "main": "./server/app.js",
+  "scripts": {
+    "build": "babel ./client --out-file ./hosted/compiled.js",
+    "watch": "babel --watch ./client --out-file ./hosted/compiled.js",
+    "nodemon": "nodemon --watch ./server ./server/app.js",
+    "start": "node ./server/app.js",
+    "pretest": "eslint ./server --fix",
+    "test": "echo \"Tests complete\""
+  },
+  "author": "Cody Van De Mark",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.4.8",
+    "xxhashjs": "^0.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-env": "^1.1.8",
+    "eslint": "^3.0.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.10.1",
+    "nodemon": "^1.11.0"
+  }
+}

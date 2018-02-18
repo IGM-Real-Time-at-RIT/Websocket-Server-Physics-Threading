@@ -1,0 +1,3 @@
+npm run build (build script to transpile ES6 client code to ES5 and put it in compiled.js)
+npm run watch (watch script to watch for ES6 client changed and automatically recompile on save)
+npm run nodemon (nodemon script to watch the node process and restart the server on each file save)
