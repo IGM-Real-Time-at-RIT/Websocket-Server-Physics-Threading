@@ -66,11 +66,11 @@ const init = () => {
 
   socket = io.connect();
 
-  socket.on('joined', setUser);
-  socket.on('updatedMovement', update);
-  socket.on('attackHit', playerDeath);
-  socket.on('attackUpdate', receiveAttack);
-  socket.on('left', removeUser);
+  socket.on('joined', setUser); //when user joins
+  socket.on('updatedMovement', update); //when players move
+  socket.on('attackHit', playerDeath); //when a player dies
+  socket.on('attackUpdate', receiveAttack); //when an attack is sent
+  socket.on('left', removeUser); //when a user leaves
 
   document.body.addEventListener('keydown', keyDownHandler);
   document.body.addEventListener('keyup', keyUpHandler);
